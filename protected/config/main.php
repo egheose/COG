@@ -57,8 +57,8 @@ return array(
 		'db'=>array(
             'connectionString' => 'mysql:host=localhost;dbname=cog2014',
             'emulatePrepare' => true,
-            'username' => 'sam',
-            'password' => 'samtest',
+            'username' => 'root',
+            'password' => 'Egheose89?',
 			'charset' => 'utf8',
 		),
 
