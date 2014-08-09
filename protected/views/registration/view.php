@@ -26,6 +26,12 @@ $this->menu=array(
 		'lastname',
 		'email',
 		'phone_number',
+		'assembly',
+		'marital_status',
+		'gender',
+		'proposed_arrival_date',
 		'address',
+		'comments',
+		'created_at',
 	),
 )); ?>

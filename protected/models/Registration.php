@@ -9,7 +9,13 @@
  * @property string $lastname
  * @property string $email
  * @property string $phone_number
+ * @property string $assembly
+ * @property string $marital_status
+ * @property string $gender
+ * @property string $proposed_arrival_date
  * @property string $address
+ * @property string $comments
+ * @property string $created_at
  */
 class Registration extends CActiveRecord
 {
@@ -29,13 +35,15 @@ class Registration extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('firstname, lastname, email, phone_number', 'required'),
-			array('firstname, lastname, email, phone_number', 'length', 'max'=>25),
-			array('address', 'length', 'max'=>255),
-            array('email', 'email'),
+			array('firstname, lastname, email, phone_number, created_at', 'required'),
+			array('firstname, lastname, email, phone_number, assembly', 'length', 'max'=>25),
+			array('marital_status', 'length', 'max'=>7),
+			array('gender', 'length', 'max'=>6),
+			array('address, comments', 'length', 'max'=>255),
+			array('proposed_arrival_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, firstname, lastname, email, phone_number, address', 'safe', 'on'=>'search'),
+			array('Id, firstname, lastname, email, phone_number, assembly, marital_status, gender, proposed_arrival_date, address, comments, created_at', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -61,7 +69,13 @@ class Registration extends CActiveRecord
 			'lastname' => 'Lastname',
 			'email' => 'Email',
 			'phone_number' => 'Phone Number',
+			'assembly' => 'Assembly',
+			'marital_status' => 'Marital Status',
+			'gender' => 'Gender',
+			'proposed_arrival_date' => 'Proposed Arrival Date',
 			'address' => 'Address',
+			'comments' => 'Comments',
+			'created_at' => 'Created At',
 		);
 	}
 
@@ -88,7 +102,13 @@ class Registration extends CActiveRecord
 		$criteria->compare('lastname',$this->lastname,true);
 		$criteria->compare('email',$this->email,true);
 		$criteria->compare('phone_number',$this->phone_number,true);
+		$criteria->compare('assembly',$this->assembly,true);
+		$criteria->compare('marital_status',$this->marital_status,true);
+		$criteria->compare('gender',$this->gender,true);
+		$criteria->compare('proposed_arrival_date',$this->proposed_arrival_date,true);
 		$criteria->compare('address',$this->address,true);
+		$criteria->compare('comments',$this->comments,true);
+		$criteria->compare('created_at',$this->created_at,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

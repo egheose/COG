@@ -55,10 +55,10 @@ return array(
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=dtw',
-			'emulatePrepare' => true,
-			'username' => 'root',
-			'password' => 'Egheose89',
+            'connectionString' => 'mysql:host=localhost;dbname=dtw2014',
+            'emulatePrepare' => true,
+            'username' => 'sam ',
+            'password' => 'samtest',
 			'charset' => 'utf8',
 		),
 
