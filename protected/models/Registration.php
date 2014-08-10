@@ -36,16 +36,20 @@ class Registration extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('firstname, lastname, email, phone_number, created_at', 'required'),
-			array('firstname, lastname, email, phone_number, assembly', 'length', 'max'=>25),
+			//array('firstname, lastname, email, phone_number, created_at', 'required'),
+			array('firstname, lastname, email, phone_number, assembly, marital_status, gender, home_address, date_of_birth
+			, proposed_arrival_date', 'required'),
+			array('assembly', 'length', 'max'=>25),
+            // email has to be a valid email address
+            array('email', 'email'),
 			array('marital_status', 'length', 'max'=>7),
 			array('gender', 'length', 'max'=>6),
 			array('home_address, comments', 'length', 'max'=>255),
-			array('date_of_birth', 'length', 'max'=>5),
+			array('date_of_birth', 'length', 'max'=>10),
 			array('proposed_arrival_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, firstname, lastname, email, phone_number, assembly, marital_status, gender, home_address, proposed_arrival_date, comments, created_at, date_of_birth', 'safe', 'on'=>'search'),
+			array('Id, firstname, lastname, email, phone_number, assembly, marital_status, gender, home_address, proposed_arrival_date, comments, date_of_birth', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -77,7 +81,7 @@ class Registration extends CActiveRecord
 			'home_address' => 'Home Address',
 			'proposed_arrival_date' => 'Proposed Arrival Date',
 			'comments' => 'Comments',
-			'created_at' => 'Created At',
+			//'created_at' => 'Created At',
 			'date_of_birth' => 'Date Of Birth',
 		);
 	}
@@ -112,7 +116,7 @@ class Registration extends CActiveRecord
 		$criteria->compare('proposed_arrival_date',$this->proposed_arrival_date,true);
 		$criteria->compare('comments',$this->comments,true);
 		$criteria->compare('created_at',$this->created_at,true);
-		$criteria->compare('date_of_birth',$this->date_of_birth,true);
+		//$criteria->compare('date_of_birth',$this->date_of_birth,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

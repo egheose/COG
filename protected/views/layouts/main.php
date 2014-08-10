@@ -15,6 +15,7 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/main.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/stylesheet.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->baseUrl; ?>/css/cog.css" />
 	<link rel="script"     media="screen"  href="<?php echo Yii::app()->request->baseUrl; ?>/css/js/j-query.js" />
 	<link rel="script"     media="screen"  href="<?php echo Yii::app()->request->baseUrl; ?>/css/js/jquery.js" />
 	<link rel="script"     media="screen"  href="<?php echo Yii::app()->request->baseUrl; ?>/css/js/jquery-ui.min.js" />
