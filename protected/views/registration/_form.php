@@ -62,15 +62,15 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'proposed_arrival_date'); ?>
-		<?php echo $form->textField($model,'proposed_arrival_date'); ?>
-		<?php echo $form->error($model,'proposed_arrival_date'); ?>
+		<?php echo $form->labelEx($model,'home_address'); ?>
+		<?php echo $form->textField($model,'home_address',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->error($model,'home_address'); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->labelEx($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
-		<?php echo $form->error($model,'address'); ?>
+		<?php echo $form->labelEx($model,'proposed_arrival_date'); ?>
+		<?php echo $form->textField($model,'proposed_arrival_date'); ?>
+		<?php echo $form->error($model,'proposed_arrival_date'); ?>
 	</div>
 
 	<div class="row">
@@ -83,6 +83,12 @@
 		<?php echo $form->labelEx($model,'created_at'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
 		<?php echo $form->error($model,'created_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->labelEx($model,'date_of_birth'); ?>
+		<?php echo $form->textField($model,'date_of_birth',array('size'=>5,'maxlength'=>5)); ?>
+		<?php echo $form->error($model,'date_of_birth'); ?>
 	</div>
 
 	<div class="row buttons">

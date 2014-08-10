@@ -38,12 +38,12 @@
 	<?php echo CHtml::encode($data->gender); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('proposed_arrival_date')); ?>:</b>
-	<?php echo CHtml::encode($data->proposed_arrival_date); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('home_address')); ?>:</b>
+	<?php echo CHtml::encode($data->home_address); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('address')); ?>:</b>
-	<?php echo CHtml::encode($data->address); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('proposed_arrival_date')); ?>:</b>
+	<?php echo CHtml::encode($data->proposed_arrival_date); ?>
 	<br />
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('comments')); ?>:</b>
@@ -52,6 +52,10 @@
 
 	<b><?php echo CHtml::encode($data->getAttributeLabel('created_at')); ?>:</b>
 	<?php echo CHtml::encode($data->created_at); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('date_of_birth')); ?>:</b>
+	<?php echo CHtml::encode($data->date_of_birth); ?>
 	<br />
 
 	*/ ?>

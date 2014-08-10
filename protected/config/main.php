@@ -7,7 +7,7 @@
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'CogAfrica',
+	'name'=>'COG WestAfrica',
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -55,13 +55,21 @@ return array(
 		// uncomment the following to use a MySQL database
 
 		'db'=>array(
-            'connectionString' => 'mysql:host=localhost;dbname=cog2014',
+            'connectionString' => 'mysql:host=localhost;dbname=cog',
             'emulatePrepare' => true,
-            'username' => 'root',
-            'password' => 'Egheose89?',
+            'username' => 'cog',
+            'password' => 'coguser01',
 			'charset' => 'utf8',
 		),
-
+        /*
+        'db'=>array(
+            'connectionString' => 'mysql:host=localhost;dbname=dtw',
+            'emulatePrepare' => true,
+            'username' => 'root',
+            'password' => 'Egheose89',
+			'charset' => 'utf8',
+		),
+        */
 		'errorHandler'=>array(
 			// use 'site/error' action to display errors
 			'errorAction'=>'site/error',

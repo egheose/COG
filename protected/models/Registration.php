@@ -12,10 +12,11 @@
  * @property string $assembly
  * @property string $marital_status
  * @property string $gender
+ * @property string $home_address
  * @property string $proposed_arrival_date
- * @property string $address
  * @property string $comments
  * @property string $created_at
+ * @property string $date_of_birth
  */
 class Registration extends CActiveRecord
 {
@@ -39,11 +40,12 @@ class Registration extends CActiveRecord
 			array('firstname, lastname, email, phone_number, assembly', 'length', 'max'=>25),
 			array('marital_status', 'length', 'max'=>7),
 			array('gender', 'length', 'max'=>6),
-			array('address, comments', 'length', 'max'=>255),
+			array('home_address, comments', 'length', 'max'=>255),
+			array('date_of_birth', 'length', 'max'=>5),
 			array('proposed_arrival_date', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('Id, firstname, lastname, email, phone_number, assembly, marital_status, gender, proposed_arrival_date, address, comments, created_at', 'safe', 'on'=>'search'),
+			array('Id, firstname, lastname, email, phone_number, assembly, marital_status, gender, home_address, proposed_arrival_date, comments, created_at, date_of_birth', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -72,10 +74,11 @@ class Registration extends CActiveRecord
 			'assembly' => 'Assembly',
 			'marital_status' => 'Marital Status',
 			'gender' => 'Gender',
+			'home_address' => 'Home Address',
 			'proposed_arrival_date' => 'Proposed Arrival Date',
-			'address' => 'Address',
 			'comments' => 'Comments',
 			'created_at' => 'Created At',
+			'date_of_birth' => 'Date Of Birth',
 		);
 	}
 
@@ -105,10 +108,11 @@ class Registration extends CActiveRecord
 		$criteria->compare('assembly',$this->assembly,true);
 		$criteria->compare('marital_status',$this->marital_status,true);
 		$criteria->compare('gender',$this->gender,true);
+		$criteria->compare('home_address',$this->home_address,true);
 		$criteria->compare('proposed_arrival_date',$this->proposed_arrival_date,true);
-		$criteria->compare('address',$this->address,true);
 		$criteria->compare('comments',$this->comments,true);
 		$criteria->compare('created_at',$this->created_at,true);
+		$criteria->compare('date_of_birth',$this->date_of_birth,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

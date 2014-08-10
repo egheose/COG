@@ -52,13 +52,13 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'proposed_arrival_date'); ?>
-		<?php echo $form->textField($model,'proposed_arrival_date'); ?>
+		<?php echo $form->label($model,'home_address'); ?>
+		<?php echo $form->textField($model,'home_address',array('size'=>60,'maxlength'=>255)); ?>
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'address'); ?>
-		<?php echo $form->textField($model,'address',array('size'=>60,'maxlength'=>255)); ?>
+		<?php echo $form->label($model,'proposed_arrival_date'); ?>
+		<?php echo $form->textField($model,'proposed_arrival_date'); ?>
 	</div>
 
 	<div class="row">
@@ -69,6 +69,11 @@
 	<div class="row">
 		<?php echo $form->label($model,'created_at'); ?>
 		<?php echo $form->textField($model,'created_at'); ?>
+	</div>
+
+	<div class="row">
+		<?php echo $form->label($model,'date_of_birth'); ?>
+		<?php echo $form->textField($model,'date_of_birth',array('size'=>5,'maxlength'=>5)); ?>
 	</div>
 
 	<div class="row buttons">

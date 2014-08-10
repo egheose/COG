@@ -29,9 +29,10 @@ $this->menu=array(
 		'assembly',
 		'marital_status',
 		'gender',
+		'home_address',
 		'proposed_arrival_date',
-		'address',
 		'comments',
 		'created_at',
+		'date_of_birth',
 	),
 )); ?>
